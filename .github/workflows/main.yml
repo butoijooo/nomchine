@@ -23,8 +23,9 @@ jobs:
 
     - name: Install NoMachine
       run: .\nomachine.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
-   - name: Run NoMachine
-      run: Start-Process -FilePath "C:\Program Files\NoMachine\bin\nxplayer.exe" -ArgumentList "/new -display -authentication" -NoNewWindow -Wait
+   
+- name: Run NoMachine
+  run: '"C:\Program Files (x86)\NoMachine\bin\nxplayer.exe" /new -display -authentication'
 
 
    
