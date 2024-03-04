@@ -22,9 +22,8 @@ jobs:
       run: Invoke-WebRequest "https://download.nomachine.com/download/8.11/Windows/nomachine_8.11.3_3_x64.exe" -OutFile "nomachine.exe"
 
     - name: Install NoMachine
-      run: .\nomachine.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
-     - name: Restart Computer
-      run: shutdown /r /t 0 /f
+      run: .\nomachine.exe /VERYSILENT /SUPPRESSMSGBOXES /SP-
+    
     - name: Download
 
 
