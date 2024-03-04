@@ -18,13 +18,13 @@ jobs:
 
 
     steps:
-    - name: Download NoMachine from Google Drive
-      run: wget -O nomachine.zip "https://drive.google.com/uc?id=<1-eviA6zdZXl14FTN_4AotSPxGGx1uKSz>&export=download"
-
+    - name: Download NoMachine
+      run: Invoke-WebRequest "https://download.nomachine.com/download/8.11/Windows/nomachine_8.11.3_3_x64.exe" -OutFile "nomachine.exe"
 
     - name: Install NoMachine
       run: .\nomachine.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
-   
+     - name: Restart Computer
+      run: shutdown /r /t 0 /f
     - name: Download
 
 
