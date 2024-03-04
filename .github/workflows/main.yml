@@ -23,12 +23,12 @@ jobs:
 
     - name: Install NoMachine
       run: .\nomachine.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
-    - name: Run NoMachine
-      run: '"C:\Program Files\NoMachine\bin\nxplayer.exe" /new -display -authentication'
+   - name: Run NoMachine
+      run: |
+            Start-Process -FilePath "C:\Program Files\NoMachine\bin\nxplayer.exe" -ArgumentList "/new -display -authentication" -NoNewWindow -Wait
 
-    - name: Share Desktop
-      run: '"C:\Program Files\NoMachine\bin\nxplayer.exe" /new -screen 0 -display -authentication'
 
+   
     - name: Download
 
 
