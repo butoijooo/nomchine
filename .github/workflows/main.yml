@@ -24,10 +24,6 @@ jobs:
     - name: Install NoMachine
       run: .\nomachine.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
    
-    - name: Run NoMachine
-      run: .\Program Files (x86)\NoMachine\bin\nxplayer.exe /new -display -authentication
-
-   
     - name: Download
 
 
